@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>squad-FIB CDK预留位兑换系统</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center; /*水平居中*/
+            align-items: center; /*垂直居中*/
+            height: 100vh; /*设置高度为视口的100%，实现垂直居中*/
+        }
+        form {
+            text-align: center; /*输入框文本水平居中*/
+        }
+        label {
+            margin-right: 10px; /*调整标签与输入框之间的间距*/
+            font-size: 18px; /*增大标签的字体大小*/
+        }
+        input[type="number"] {
+            font-size: 18px; /*增大输入框的字体大小*/
+            padding: 10px; /*增加输入框的内边距，以便容纳更大的字体*/
+            margin-top: 10px; /*增加输入框之间的间距*/
+        }
+        input[type="submit"] {
+            font-size: 24px; /*增大确认按钮的字体大小*/
+            padding: 15px 30px; /*增加按钮的内边距，以便容纳更大的字体和增加点击区域*/
+            margin-top: 10px; /*增加按钮与输入框之间的间距*/
+            cursor: pointer; /*更改鼠标指针样式，表明按钮是可点击的*/
+        }
+        body {
+            background-image: url('https://www.tanggetian.fun/content/uploadfile/202404/03e81714037883.png');
+            background-repeat: no-repeat; /* 不重复 */
+            background-size: cover; /* 覆盖整个区域 */
+            background-position: center; /* 图片居中 */
+        }
+        h1 {
+            font-size: 3em;
+            color: Cyan;
+            margin-top: 100px;
+        }
+        h2 {
+            font-size: 3em;
+            color: Cyan;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form method="POST" action="/submit">
+            <h2 style="color:Cyan;"> squad-FIB CDK预留位兑换系统</h2>
+            <h1 style="color:Cyan;"> 请正确输入 steam 64 id 及 cdk </h1>
+            <label for="steam_id">Steam ID:</label>
+            <input type="number" id="steam_id" name="steam_id" required><br><br>
+            <label for="cdk">CDK:</label>
+            <input type="number" id="cdk" name="cdk" required><br><br>
+            <input type="submit" value="确认">
+        </form>
+    </div>
+</body>
+</html>
