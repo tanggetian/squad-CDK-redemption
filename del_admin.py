@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta  # 从datetime模块导入datetime和timedelta类
-
+import frozen_dir
 #by 本程序由唐格天制作
 
 # 定义一个函数is_outdated，用于判断给定的日期字符串是否早于当前时间一个月
@@ -17,7 +17,7 @@ def is_outdated(date_str):
 lines_to_keep = []
 
 # 使用with语句打开文件"Admins.cfg"，读取文件内容并存储在列表lines中
-with open("Admins.cfg", "r") as file:
+with open(frozen_dir.app_path()+r'\Admins.cfg', "r") as file:
     lines = file.readlines()  # 读取文件内容到列表lines中
 
 # 遍历列表lines中的每一行内容
@@ -27,6 +27,6 @@ for line in lines:
         lines_to_keep.append(line)  # 如果当前行不是过期行，则将其添加到lines_to_keep列表中
 
 # 使用with语句再次打开文件"Admins.cfg"，但这次是写入模式（w模式），将保留的行内容写回文件中
-with open("Admins.cfg", "w") as file:
+with open(frozen_dir.app_path()+r'\Admins.cfg', "w") as file:
     for line in lines_to_keep:  # 遍历lines_to_keep列表中的内容，即保留的行内容
         file.write(line)  # 将保留的行内容逐行写回文件中
