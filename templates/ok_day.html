@@ -8,7 +8,7 @@
     <style>
         /* 设置整个页面的背景图片，不重复，覆盖整个区域，并居中显示 */
         body {
-            background-image: url('https://www.tanggetian.fun/content/uploadfile/202404/03e81714037883.png');
+            background-image: url('https://www.tanggetian.fun/content/uploadfile/202404/f21f1714037847.png');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -40,7 +40,7 @@
         h1 {
             margin: 0 0 30px;
             color: red; /* 更改颜色为红色 */
-            font-size: 24px;
+            font-size: 30px;
             text-align: center;
         }
 
@@ -51,21 +51,8 @@
             color: #666666;
             font-size: 18px;
         }
-
-        /* 设置输入框样式，包括width、padding、font-size、border-radius、border和outline */
-        input[type="number"],
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            border-radius: 3px;
-            border: 1px solid #cccccc;
-            outline: none;
-            margin-bottom: 10px; /* 增加距离，根据需要进行调整 */
-        }
-
         /* 设置提交按钮样式，包括width、padding、font-size、color、background-color、border、border-radius和cursor */
-        input[type="submit"] {
+        input[type="button"] {
             width: 100%;
             padding: 10px;
             font-size: 18px;
@@ -79,25 +66,34 @@
         }
 
         /* 设置提交按钮悬停时的样式，包括background-color */
-        input[type="submit"]:hover {
+        input[type="button"]:hover {
             background-color: #3282b8;
         }
-    </style>
+            </style>
+    <script>
+        // 在页面加载完成后执行以下代码
+        window.addEventListener('DOMContentLoaded', (event) => {
+            // 获取返回按钮元素
+            const backButton = document.querySelector('input[type="button"]');
+
+            // 添加点击事件监听器
+            backButton.addEventListener('click', () => {
+                // 跳转到指定链接
+                window.location.href = 'https://fibcdk.tanggetian.fun/';
+            });
+        });
+    </script>
 </head>
 <body>
     <!-- 设置容器div，用于包含表单元素 -->
     <div class="container">
         <!-- 创建表单，用于用户输入Steam ID和CDK -->
-        <form method="POST" action="/submit">
+        <form method="POST" action="/button">
             <h2>SQUAD-FIB CDK预留位兑换系统</h2>
-            <h1>请正确输入steam 64 id及cdk</h1>
-            <!-- 设置标签和输入框 -->
-            <label for="steam_id">Steam ID:</label>
-            <input type="number" id="steam_id" name="steam_id" required>
-            <label for="cdk">CDK:</label>
-            <input type="text" id="cdk" name="cdk" required>
-            <!-- 设置确认按钮 -->
-            <input type="submit" value="确认">
+            <h1>体验卡用户</h1>
+            <h1>兑换完成</h1>
+            <!-- 设置返回按钮 -->
+            <input type="button" value="返回">
         </form>
     </div>
 </body>

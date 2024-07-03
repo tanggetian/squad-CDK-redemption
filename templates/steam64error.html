@@ -4,29 +4,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>squad-FIB CDK预留位兑换系统</title>
+    <title>SQUAD-FIB CDK预留位兑换系统</title>
     <style>
+        /* 设置整个页面的背景图片，不重复，覆盖整个区域，并居中显示 */
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-image: url('https://www.tanggetian.fun/content/uploadfile/202404/f21f1714037847.png');
-            background-repeat: no-repeat; /* 不重复 */
-            background-size: cover; /* 覆盖整个区域 */
+            background-image: url('https://www.tanggetian.fun/content/uploadfile/202404/453d1714140079.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* 使body的高度占据整个视口的100% */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        h1 {
-            font-size: 3em;
-            color: red;
-            margin-top: 200px;
+
+        /* 设置容器样式，包括背景颜色、最大宽度、居中显示、padding、border-radius和box-shadow */
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
+
+        /* 设置标题样式，包括margin、color、font-size和text-align */
         h2 {
-            font-size: 3em;
-            color: yellow;
-            margin-top: 100px;
+            margin: 0 0 20px;
+            color: #333333;
+            font-size: 36px;
+            text-align: center;
         }
-    </style>
+
+        h1 {
+            margin: 0 0 30px;
+            color: red; /* 更改颜色为红色 */
+            font-size: 40px;
+            text-align: center;
+        }
+
+        /* 设置标签样式，包括display、margin-bottom、color和font-size */
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #666666;
+            font-size: 18px;
+        }
+        /* 设置提交按钮样式，包括width、padding、font-size、color、background-color、border、border-radius和cursor */
+        input[type="button"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            color: #ffffff;
+            background-color: #3498db;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+	        margin-top: 10px; /* 增加距离，根据需要进行调整 */
+        }
+
+        /* 设置提交按钮悬停时的样式，包括background-color */
+        input[type="button"]:hover {
+            background-color: #3282b8;
+        }
+            </style>
+    <script>
+        // 在页面加载完成后执行以下代码
+        window.addEventListener('DOMContentLoaded', (event) => {
+            // 获取返回按钮元素
+            const backButton = document.querySelector('input[type="button"]');
+
+            // 添加点击事件监听器
+            backButton.addEventListener('click', () => {
+                // 跳转到指定链接
+                window.location.href = 'https://fibcdk.tanggetian.fun/';
+            });
+        });
+    </script>
 </head>
 <body>
-    <h2 style="color:yellow;"> squad-FIB CDK预留位兑换系统</h2>
-    <h1 style="color:red;">steam64 id格式错误，请重新输入</h1>
+    <!-- 设置容器div，用于包含表单元素 -->
+    <div class="container">
+        <!-- 创建表单，用于用户输入Steam ID和CDK -->
+        <form method="POST" action="/button">
+            <h2>SQUAD-FIB CDK预留位兑换系统</h2>
+            <h1>steam64 id格式错误，请重新输入</h1>
+            <!-- 设置返回按钮 -->
+            <input type="button" value="返回">
+        </form>
+    </div>
 </body>
 </html>
